@@ -10,6 +10,7 @@ import org.w3c.dom.Text
 class MainActivity : AppCompatActivity() {
     private var buttonArray = emptyArray<Button>()
     private var playerOne = true
+    private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +43,9 @@ class MainActivity : AppCompatActivity() {
         val status = findViewById<TextView>(R.id.tvDisplay)
         for(button in buttonArray) {
             button.setText("")
+            button.setEnabled(true)
         }
+        count = 0
         status.text = "Player X's turn!"
 
         playerOne = true
@@ -71,18 +74,153 @@ class MainActivity : AppCompatActivity() {
                 playerOne = true
             }
         }
+        horizontalWin()
+        verticalWin()
+        diagonalWin()
+        if(horizontalWin()) {
+            for(button in buttonArray) {
+                button.setEnabled(false)
+            }
+        }
+        if(verticalWin()) {
+            for(button in buttonArray) {
+                button.setEnabled(false)
+            }
+        }
+        if(diagonalWin()) {
+            for(button in buttonArray) {
+                button.setEnabled(false)
+            }
+        }
+
+
+
+        count++
+        if(!horizontalWin() && !verticalWin() && !diagonalWin() && count >= 9) {
+            status.setText("It's a Tie!")
+        }
     }
 
 
-    fun horizontalWin() {
-
+    fun horizontalWin(): Boolean {
+        val status = findViewById<TextView>(R.id.tvDisplay)
+        getButtonArray()
+        // If X gets a win
+        if (buttonArray[0].text == "X"
+            && buttonArray[1].text == "X"
+            && buttonArray[2].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        if (buttonArray[3].text == "X"
+            && buttonArray[4].text == "X"
+            && buttonArray[5].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        if (buttonArray[6].text == "X"
+            && buttonArray[7].text == "X"
+            && buttonArray[8].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        // If O gets a win
+        if (buttonArray[0].text == "O"
+            && buttonArray[1].text == "O"
+            && buttonArray[2].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
+        if (buttonArray[3].text == "O"
+            && buttonArray[4].text == "O"
+            && buttonArray[5].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
+        if (buttonArray[6].text == "O"
+            && buttonArray[7].text == "O"
+            && buttonArray[8].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
+        return false
     }
 
-    fun verticalWin() {
+    fun verticalWin(): Boolean {
+        val status = findViewById<TextView>(R.id.tvDisplay)
+        getButtonArray()
+        // If X gets a win
+        if (buttonArray[0].text == "X"
+            && buttonArray[3].text == "X"
+            && buttonArray[6].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        if (buttonArray[1].text == "X"
+            && buttonArray[4].text == "X"
+            && buttonArray[7].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        if (buttonArray[2].text == "X"
+            && buttonArray[5].text == "X"
+            && buttonArray[8].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        // If O gets a win
+        if (buttonArray[0].text == "O"
+            && buttonArray[3].text == "O"
+            && buttonArray[6].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
+        if (buttonArray[1].text == "O"
+            && buttonArray[4].text == "O"
+            && buttonArray[7].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
+        if (buttonArray[2].text == "O"
+            && buttonArray[5].text == "O"
+            && buttonArray[8].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
 
+        return false
     }
 
-    fun diagonalWin() {
+    fun diagonalWin(): Boolean {
+        val status = findViewById<TextView>(R.id.tvDisplay)
+        getButtonArray()
+        // If X gets a win
+        if (buttonArray[0].text == "X"
+            && buttonArray[4].text == "X"
+            && buttonArray[8].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        if (buttonArray[2].text == "X"
+            && buttonArray[4].text == "X"
+            && buttonArray[6].text == "X") {
+            status.text = "Player X Wins!"
+            return true
+        }
+        // If O gets a win
+        if (buttonArray[0].text == "O"
+            && buttonArray[4].text == "O"
+            && buttonArray[8].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
+        if (buttonArray[2].text == "O"
+            && buttonArray[4].text == "O"
+            && buttonArray[6].text == "O") {
+            status.text = "Player O Wins!"
+            return true
+        }
 
+        return false
     }
 }
