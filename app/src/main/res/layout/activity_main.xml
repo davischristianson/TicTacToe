@@ -7,169 +7,179 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnTopLeft"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnMidLeft"
+        app:layout_constraintEnd_toStartOf="@+id/btnTopMid"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnTopMid"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/btnTopRight"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnTopLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnTopLeft" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnTopRight"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnTopMid"
+        app:layout_constraintTop_toTopOf="@+id/btnTopMid" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnMidLeft"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/btnBotLeft"
+        app:layout_constraintEnd_toStartOf="@+id/btnMiddle"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTopLeft" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnMiddle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/btnMidRight"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button4" />
+        app:layout_constraintStart_toEndOf="@+id/btnMidLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnMidLeft" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnMidRight"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="@+id/button5" />
+        app:layout_constraintStart_toEndOf="@+id/btnMiddle"
+        app:layout_constraintTop_toTopOf="@+id/btnMiddle" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnBotLeft"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginBottom="320dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/tvDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/btnBotMid"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMidLeft" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnBotMid"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintEnd_toStartOf="@+id/btnBotRight"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/btnBotLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnBotLeft" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnBotRight"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:onClick="ticTacToeClick"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="@+id/button8" />
+        app:layout_constraintStart_toEndOf="@+id/btnBotMid"
+        app:layout_constraintTop_toTopOf="@+id/btnBotMid" />
 
     <Button
-        android:id="@+id/button10"
-        android:layout_width="384dp"
+        android:id="@+id/btnNewGame"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:backgroundTint="@color/material_dynamic_neutral70"
+        android:backgroundTint="#C3C0C0"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="New Game"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:onClick="resetGame"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplay" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvDisplay"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="270dp"
         android:gravity="center"
-        android:text="Winner:"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
 </androidx.constraintlayout.widget.ConstraintLayout>
